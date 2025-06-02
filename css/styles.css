@@ -1,0 +1,111 @@
+body {
+  background-color: black;
+  color: white;
+  font-family: "Montserrat", Helvetica, Arial, sans-serif;
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 300px 1fr 300px;
+  grid-template-rows: 1fr 110px;
+  grid-template-areas:
+    "biblioteca principal reproduccion"
+    "reproductor reproductor reproductor";
+  gap: 16px;
+  height: 100vh;
+  padding: 16px;
+}
+
+.biblioteca {
+  grid-area: biblioteca;
+  background-color: #121212;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.contenido-principal {
+  grid-area: principal;
+  background-color: #121212;
+  padding: 16px; /* Ajuste del espacio interno */
+  border-radius: 8px;  
+}
+
+.estado-reproduccion {
+  grid-area: reproduccion;
+  background-color: #121212;
+  padding: 16px;
+  border-radius: 8px;
+}
+
+.reproductor {
+  grid-area: reproductor;
+  padding: 16px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.barra-reproduccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.iconos-reproductor {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.reproductor i {
+  color: #fff;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  margin-top: 0 8px;
+  position: relative;
+}
+
+.progreso {
+  width: 30%;
+  height: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.barra-opciones {
+  display: flex;
+  position: absolute;
+  font-size: 16px;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.barra-progreso-con-tiempos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.tiempo-inicial,
+.tiempo-final {
+  font-size: 12px;
+  color: #b3b3b3;
+  min-width: 40px;
+  text-align: center;
+}
