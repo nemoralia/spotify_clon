@@ -9,6 +9,21 @@
 </head>
 
 <body>
+    <nav class="navbar">
+        <div class="logo-spotify">
+            <i class="bi bi-spotify"></i>
+        </div>
+        <div class="boton-home"> <!-- Clase del botón de inicio -->
+            <i class="bi bi-house-door-fill"></i>
+        </div>
+    <div class="barra-busqueda"> <!-- Clase de la barra de búsqueda -->
+        <i class="bi bi-search"></i>
+        <input type="text" placeholder="¿Qué quieres reproducir?">
+        <i class="bi bi-list lista"></i> <!-- Icono de la lista -->
+    </div>
+    </nav>
+
+
     <div class="layout">
         <aside class="biblioteca">
             Tu Biblioteca
@@ -43,7 +58,13 @@
         <div class="barra-opciones">    <!-- Clase de los iconos de opciones del reproductor -->
             <i class="bi bi-view-stacked"></i>
             <i class="bi bi-phone"></i>
-            <i class="bi bi-volume-up"></i>
+            <i class="bi bi-mic-fill"></i>
+
+            <div class="barra-volumen"> <!-- Clase de la barra de volumen -->
+                 <i class="bi bi-volume-up"></i>
+                <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider"> <!-- Barra deslizante para el volumen -->
+            </div>
+            
             <i class="bi bi-textarea-resize"></i>
             <i class="bi bi-fullscreen"></i>
 

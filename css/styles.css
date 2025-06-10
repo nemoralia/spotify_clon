@@ -14,6 +14,7 @@ body {
   gap: 16px;
   height: 100vh;
   padding: 16px;
+  padding-top: 60px; /* Espacio para la barra de navegación */
 }
 
 .biblioteca {
@@ -88,7 +89,6 @@ body {
 .barra-opciones {
   display: flex;
   position: absolute;
-  font-size: 16px;
   right: 24px;
   top: 50%;
   transform: translateY(-50%);
@@ -104,8 +104,74 @@ body {
 
 .tiempo-inicial,
 .tiempo-final {
-  font-size: 12px;
+  font-size: 8px;
   color: #b3b3b3;
   min-width: 40px;
   text-align: center;
+}
+
+.barra-volumen .slider{
+  width: 80px;  /* Más pequeña */
+  height: 4px; /* Más delgada */
+  accent-color: white; /* Color verde de Spotify */
+  background: transparent; /* Fondo transparente */
+  border-radius: 2px;
+  
+}
+
+.navbar {
+  display: flex;
+  align-items: center;
+  background-color: black;
+  padding: 12px 32px;
+  height: 40px;
+  width: 100%;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 200;
+}
+
+.logo-spotify {
+  font-size: 30px;
+  margin-right: 24px;
+}
+
+
+
+.barra-busqueda {
+  display: flex;
+  align-items: center;
+  background: #282828;
+  border-radius: 20px;
+  padding: 0 8px;  /* Espacio interno */
+  flex: 1; /* Ocupa el espacio restante */
+  max-width: 400px; /* Ancho máximo para la barra de búsqueda */
+  margin: 0 auto; /* Centrado horizontal */
+}
+
+.barra-busqueda i {
+  color: #b3b3b3;
+  font-size: 20px;
+  margin-right: 12px;
+  
+}
+
+.barra-busqueda input {
+  background: transparent;
+  border: none ;
+  color: white;
+  font-size: 16px;
+  padding: 12px 0;   /* Espacio interno */
+  outline: none; /* Quita el borde de enfoque */
+  width: 100%; /* Ocupa todo el espacio disponible */
+}
+
+
+.boton-home {
+  margin-left: 16px;
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+
 }

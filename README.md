@@ -22,10 +22,20 @@ Este proyecto es una recreación visual de la interfaz de Spotify usando **HTML*
 
 ## 📸 Vista previa
 
-![Vista previa del clon de Spotify](PROXIMAMENTE)
+PROXIMAMENTE
 
 ## 💡 ¿Cómo usarlo?
 
 1. Clona el repositorio:
    ```sh
    git clone https://github.com/tuusuario/spotify_clon.git
+   ```
+2. Abre el archivo `index.html` en tu navegador.
+
+## ✨ Créditos
+
+- Inspirado en [Spotify](https://www.spotify.com/)
+- Iconos por [Bootstrap Icons](https://icons.getbootstrap.com/)
+- Fuente Montserrat por [Google Fonts](https://fonts.google.com/)
+
+---
