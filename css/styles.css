@@ -180,7 +180,7 @@ body {
   background: transparent;
   border: none ;
   color: white;
-  font-size: 16px;
+  font-size: 14px;
   padding: 12px 0;   /* Espacio interno */
   outline: none; /* Quita el borde de enfoque */
   width: 100%; /* Ocupa todo el espacio disponible */
@@ -188,7 +188,7 @@ body {
 
 .boton-usuario {
   position: fixed;
-  top: 16px;
+  top: 4px;
   right: 32px;
   display: flex;
   align-items: center;
@@ -197,7 +197,74 @@ body {
 }
 
 .boton-usuario i {
-  font-size: 20px;
+  font-size: 15px;
   color: #fff;
   cursor: pointer;
+}
+
+.boton-usuario h4 {
+  font-size: 13px; /* Ajusta el tamaño según lo que necesites */
+  color: #fff;
+  font-weight: normal;
+}
+
+.biblioteca h2{
+  font-size: 20px; /* Tamaño del título de la biblioteca */
+  font-weight: 700; /* Negrita */
+  margin-bottom: 18px; /* Espacio debajo del título */
+  color: #fff;
+}
+
+.biblioteca-categorias-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.biblioteca-categorias::-webkit-scrollbar {
+  display: none; /* Oculta la barra en Chrome/Safari */
+}
+
+
+.biblioteca-categorias {
+  display: flex;
+  gap: 8px; /* Espacio entre los botones */
+  overflow-x: auto; /* Permite desplazamiento horizontal si hay muchos botones */
+  scrollbar-width: none; /* Oculta la barra de desplazamiento en Firefox */
+  -ms-overflow-style: none; /* Oculta la barra de desplazamiento en IE y Edge */
+  flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+
+.categoria-btn {
+  flex: 0 0 auto; /* Evita que los botones se estiren */
+  background: #282828; /* Fondo oscuro para los botones */
+  color: #fff; /* Color del texto */
+  border: none;  /* Sin borde */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 8px 20px; /* Espacio interno */
+  font-size:14px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+  transition: background 0.2s color 0.2s; 
+}
+
+.categorias-flecha {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 4px;
+}
+
+.categorias-flecha-izquierda {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 22px;
+  cursor: pointer;
+  margin-left: 8px;
+  padding: 4px;
 }
