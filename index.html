@@ -1,59 +1,173 @@
 <!DOCTYPE html>
 <html lang="es">
+
 <head>
     <meta charset="UTF-8">
-    <title>SPOTIFY</title> 
-    <link rel="stylesheet" href="css/styles.css" /> 
-    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet"> <!-- Importé Monserrat como fuente -->
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"> <!-- Importé Bootstrap Icons para iconos -->
+    <title>SPOTIFY</title>
+    <link rel="stylesheet" href="css/styles.css" />
+    <link href="https://fonts.googleapis.com/css?family=Montserrat:400,700&display=swap" rel="stylesheet">
+    <!-- Importé Monserrat como fuente -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <!-- Importé Bootstrap Icons para iconos -->
 </head>
 
 <body>
-    
-        <nav class="navbar">
+
+    <nav class="navbar">
         <div class="logo-spotify">
             <i class="bi bi-spotify"></i>
         </div>
-        
+
         <div class="grupo-central">
-        <div class="boton-home"> <!-- Clase del botón de inicio -->
-            <i class="bi bi-house-door-fill"></i>
+            <div class="boton-home"> <!-- Clase del botón de inicio -->
+                <i class="bi bi-house-door-fill"></i>
+            </div>
+            <div class="barra-busqueda"> <!-- Clase de la barra de búsqueda -->
+                <i class="bi bi-search"></i>
+                <input type="text" placeholder="¿Qué quieres reproducir?">
+                <i class="bi bi-list lista"></i> <!-- Icono de la lista -->
+            </div>
         </div>
-    <div class="barra-busqueda"> <!-- Clase de la barra de búsqueda -->
-        <i class="bi bi-search"></i>
-        <input type="text" placeholder="¿Qué quieres reproducir?">
-        <i class="bi bi-list lista"></i> <!-- Icono de la lista -->
-    </div>
-    </div>
-    <div class="boton-usuario">
-        <i class="bi bi-download"></i>
-        <h4>"Instalar aplicación"</h4>
-        <i class="bi bi-bell"></i>
-        <i class="bi bi-people"></i>
-        <i class="bi bi-person-circle"></i>
-    </div>
+        <div class="boton-usuario">
+            <i class="bi bi-download"></i>
+            <h4>Instalar aplicación</h4>
+            <i class="bi bi-bell"></i>
+            <i class="bi bi-people"></i>
+            <i class="bi bi-person-circle"></i>
+        </div>
     </nav>
 
     <div class="layout">
         <aside class="biblioteca">
-            Tu Biblioteca
+          <div class="biblioteca-header">
+            <h2 class="titulo-biblioteca">Tu biblioteca</h2>
+            <div class="botones-biblioteca">
+            <div class="boton-biblioteca"> 
+                <i class="bi bi-plus-circle"></i>
+            </div>
+            <div class="boton-expandir">
+            <i class="bi bi-arrows-angle-expand"></i>
+          </div>
+          </div>
+          </div>
+          
+            
             <div class="biblioteca-categorias-wrapper">
-                <button class ="categorias-flecha-izquierda">
+                <button class="categorias-flecha-izquierda">
                     <i class="bi bi-chevron-left"></i>
                 </button>
-    <div class="biblioteca-categorias">
-        <button class="categoria-btn">Playlists</button>
-        <button class="categoria-btn">Artistas</button>
-        <button class="categoria-btn">Álbumes</button>
-        <button class="categoria-btn">Podcast y programas</button>
-    </div>
-    <button class="categorias-flecha">
-        <i class="bi bi-chevron-right"></i>
-    </button>
-</div>
+                <div class="biblioteca-categorias">
+                    <button class="categoria-btn">Playlists</button>
+                    <button class="categoria-btn">Artistas</button>
+                    <button class="categoria-btn">Álbumes</button>
+                    <button class="categoria-btn">Podcast y programas</button>
+                </div>
+                <button class="categorias-flecha">
+                    <i class="bi bi-chevron-right"></i>
+                </button>
+            </div>
+
+            ***BUSCAR***
+            ***RECIENTE***
+            ***ICONO DE LISTA***
+
+
+            <ul class="me-gusta">
+                <li>
+                    <img src="https://misc.scdn.co/liked-songs/liked-songs-300.jpg" alt="TusMeGusta"
+                        class="me-gustan-img">
+                        <div class="info-me-gustan">
+                            <span class="nombre-me-gustan">Tus me gusta</span>
+                            <span class="tipo-me-gustan">Playlist • 4,305 canciones</span>
+                        </div>
+                </li>
+            </ul>
+
+            <ul class="lista-artistas">
+                <!-- 1. Rammstein -->
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/41/Rammstein_at_Wacken_Open_Air_2013_06.jpg/330px-Rammstein_at_Wacken_Open_Air_2013_06.jpg" alt="Rammstein" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Rammstein</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 2. Ulver -->
+                <li>
+                    <img src="https://www.metal-archives.com/images/1/2/0/8/1208_photo.jpg?0442" alt="Ulver" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Ulver</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 3. Black Sabbath -->
+                <li>
+                    <img src="https://www.metal-archives.com/images/9/9/99_photo.jpg?2845" alt="Black Sabbath" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Black Sabbath</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 4. Pink Floyd -->
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/d/d6/Pink_Floyd_-_all_members.jpg/250px-Pink_Floyd_-_all_members.jpg" alt="Pink Floyd" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Pink Floyd</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 5. Album God is Good de Om -->
+                <li>
+                    <img src="https://upload.wikimedia.org/wikipedia/en/thumb/1/1b/Om_God_Is_Good_cover.jpg/250px-Om_God_Is_Good_cover.jpg" alt="God is Good - Om" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">God is Good</span>
+                        <span class="tipo-artista">Álbum • Om</span>
+                    </div>
+                </li>
+                <!-- 6. Album Infinite Granite de Deafheaven -->
+                <li>
+                    <img src="https://www.metal-archives.com/images/9/5/4/1/954115.jpg?2222" alt="Infinite Granite - Deafheaven" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Infinite Granite</span>
+                        <span class="tipo-artista">Álbum • Deafheaven</span>
+                    </div>
+                </li>
+                <!-- 7. Guns N Roses -->
+                <li>
+                    <img src="https://imagenes.elpais.com/resizer/v2/https%3A%2F%2Fep01.epimg.net%2Felpais%2Fimagenes%2F2019%2F09%2F24%2Ficon%2F1569324232_356136_1569755330_noticia_fotograma.jpg?auth=cd1b44cc5d29f89f15299dcf1e5cd8c7187345080ab16e28f0e423d4ed8eec5c&width=980&height=980&smart=true" alt="Guns N Roses" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Guns N Roses</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 8. Alcest -->
+                <li>
+                    <img src="https://www.metal-archives.com/images/1/9/7/0/19701_photo.jpg?5624" alt="Alcest" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Alcest</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 9. Opeth -->
+                <li>
+                    <img src="https://www.metal-archives.com/images/3/8/38_photo.jpg?0508" alt="Opeth" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Opeth</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+                <!-- 10. Lustre -->
+                <li>
+                    <img src="https://www.metal-archives.com/images/3/5/4/0/3540266973_photo.jpg" alt="Lustre" class="artista-img">
+                    <div class="info-artista">
+                        <span class="nombre-artista">Lustre</span>
+                        <span class="tipo-artista">Artista</span>
+                    </div>
+                </li>
+            </ul>
         </aside>
 
-        
+
         <main class="contenido-principal">
             Contenido principal
         </main>
@@ -63,36 +177,37 @@
         <footer class="reproductor">
             <div class="barra-reproduccion"> <!-- Clase de los iconos del reproductor -->
                 <div class="iconos-reproductor"> <!-- Clase de los iconos del reproductor -->
-                <i class="bi bi-shuffle"></i>
-                <i class="bi bi-skip-start-fill"></i>
-                <i class="bi bi-play-circle-fill"></i>
-                <i class="bi bi-skip-end-fill"></i>
-                <i class="bi bi-repeat-1"></i>
+                    <i class="bi bi-shuffle"></i>
+                    <i class="bi bi-skip-start-fill"></i>
+                    <i class="bi bi-play-circle-fill"></i>
+                    <i class="bi bi-skip-end-fill"></i>
+                    <i class="bi bi-repeat-1"></i>
                 </div>
-                
 
-            <div class="barra-progreso-con-tiempos"> <!-- Clase de la barra de progreso con los tiempos -->
-                <span class="tiempo-inicio">0:00</span>
-                <div class="barra-progreso">
-                    <div class="progreso"></div> <!-- Clase de la barra de progreso -->
+
+                <div class="barra-progreso-con-tiempos"> <!-- Clase de la barra de progreso con los tiempos -->
+                    <span class="tiempo-inicio">0:00</span>
+                    <div class="barra-progreso">
+                        <div class="progreso"></div> <!-- Clase de la barra de progreso -->
+                    </div>
+                    <span class="tiempo-fin">3:45</span>
                 </div>
-                <span class="tiempo-fin">3:45</span>         
             </div>
-            </div>
-            
 
-        <div class="barra-opciones">    <!-- Clase de los iconos de opciones del reproductor -->
-            <i class="bi bi-view-stacked"></i>
-            <i class="bi bi-phone"></i>
-            <i class="bi bi-mic-fill"></i>
 
-            <div class="barra-volumen"> <!-- Clase de la barra de volumen -->
-                 <i class="bi bi-volume-up"></i>
-                <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider"> <!-- Barra deslizante para el volumen -->
-            </div>
-            
-            <i class="bi bi-textarea-resize"></i>
-            <i class="bi bi-fullscreen"></i>
+            <div class="barra-opciones"> <!-- Clase de los iconos de opciones del reproductor -->
+                <i class="bi bi-view-stacked"></i>
+                <i class="bi bi-phone"></i>
+                <i class="bi bi-mic-fill"></i>
+
+                <div class="barra-volumen"> <!-- Clase de la barra de volumen -->
+                    <i class="bi bi-volume-up"></i>
+                    <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider">
+                    <!-- Barra deslizante para el volumen -->
+                </div>
+
+                <i class="bi bi-textarea-resize"></i>
+                <i class="bi bi-fullscreen"></i>
 
         </footer>
 
