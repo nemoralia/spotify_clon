@@ -11,3 +11,27 @@
 
 ### Cambiado
 - Ajuste de estilos para centrar iconos en botones circulares.
+
+---
+
+## [2025-08-06]
+### Añadido
+- Explicaciones y ejemplos sobre el uso de `<div>` y `<span>`.
+- Comentarios línea por línea en el HTML para facilitar el aprendizaje.
+- CSS comentado para listas de artistas y elementos de biblioteca.
+- Barra de búsqueda y botones de usuario en la barra superior.
+- Estructura inicial de la biblioteca y categorías.
+
+### Cambiado
+- Ajuste de márgenes y paddings para mejorar la separación visual.
+- Corrección de conflictos de estilos entre selectores de clase y etiqueta.
+- Mejoras en la estructura de los botones de la biblioteca.
+
+---
+
+## [2025-08-05]
+### Añadido
+- Estructura base del proyecto: archivos `index.html`, `styles.css` y `CHANGELOG.md`.
+- Layout principal con grid CSS.
+- Importación de fuentes y Bootstrap Icons.
+- Primeros estilos globales y de layout.
