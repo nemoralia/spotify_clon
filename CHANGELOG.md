@@ -1,5 +1,10 @@
 # Changelog
 
+## [2025-08-08]
+### Añadido
+- Se añade la lupa y la lista de recientes.
+---
+
 ## [2025-08-07]
 ### Añadido
 - Lista de artistas y álbumes con imágenes reales y etiquetas de tipo.

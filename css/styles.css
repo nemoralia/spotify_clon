@@ -343,6 +343,36 @@ background: #181818; /* Color de fondo de la barra de desplazamiento */
 
 /* 5. Tu Biblioteca */
 
+.biblioteca-busqueda{
+  display: flex;
+  align-items: center;
+  border-radius: 20px;
+  padding: 6px 16px 6px 8px;
+  gap: 12px;
+  margin-bottom: 16px;
+  margin-top: 8px;
+}
+
+.biblioteca-busqueda i {
+  color: #b3b3b3;
+  font-size: 16px;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.biblioteca-busqueda-info{
+  display: flex;
+  margin-left: auto;
+  align-items: center;
+  gap: 8px;
+}
+
+.biblioteca-busqueda-info span {
+  color: #fff;
+  font-size: 12px;
+  font-weight: 400;
+  letter-spacing: 0.5px;
+}
 
 .me-gusta {
   list-style: none; /* Elimina los puntos de la lista */
