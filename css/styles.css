@@ -453,3 +453,133 @@ background: #181818; /* Color de fondo de la barra de desplazamiento */
   font-weight: 400;
 
 }
+
+/* 6. Contenido Principal */
+
+.contenido-categorias {
+  display: flex;
+  gap: 6px; /* Espacio entre los botones */
+  flex: 1; /* Ocupa todo el espacio disponible */
+}
+
+.contenido-categoria-btn {
+  flex: 0 0 auto; /* Evita que los botones se estiren */
+  background: #282828; 
+  color: #fff; 
+  border: none;  /* Sin borde */
+  border-radius: 20px; /* Bordes redondeados */
+  padding: 6px 12px; /* Espacio interno */
+  font-size:13px; /* Tamaño del texto */
+  cursor: pointer; /* Cambia el cursor al pasar por encima */
+}
+
+.cuadro{
+  display: grid;
+  grid-template-columns: repeat(2, 1fr) /*Dos columnas*/;
+  gap: 10px;
+  padding: 20px;
+}
+
+.items {
+  display: flex;
+  gap: 8px;
+  background-color: #282828;
+  text-align: left;
+  border-radius: 8px;
+  font-weight: bold;
+  font-size: 14px;
+  align-items: center;
+  cursor: pointer;
+}
+
+.items-img {
+  width: 50px;
+  border-radius: 4px;
+}
+
+.hecho-para-header{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 20px;
+}
+
+
+.hecho-para-contenedor{
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+
+}
+
+span.hecho-para {
+  font-size: 12px;
+  margin: 0;
+  padding: 0;
+}
+
+h2.hecho-para {
+  font-size: 25px;
+  margin: 0;
+  padding: 0;
+  font-weight: bold;
+  cursor: pointer;
+  
+}
+
+.mostrar-todo{
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  color: #b3b3b3;
+}
+
+
+.mix-wrapper {
+  display: flex;
+  align-items: center;
+  gap: 10px; /* espacio entre botones y viewport */
+  overflow: hidden;
+}
+
+.mix-viewport {
+  overflow: hidden;
+  width: calc((160px *4)+(10px*3));
+
+}
+
+.mix-contenedor{
+display: flex;
+gap: 15px;
+overflow-x: auto;
+scroll-behavior: smooth;
+flex: 1;
+max-width: calc(130px * 4 + 20px * 3); /* 4 mix + 3 espacios de gap */
+}
+
+.mix {
+  width: 160px;        /* ancho fijo para cada tarjeta */
+  flex-shrink: 0;      /* evita que se encojan */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 8px;
+}
+
+
+.mix-img {
+  width: 100%;         /* ocupa todo el ancho del mix */
+  aspect-ratio: 1 / 1; /* cuadrada, como en Spotify */
+  object-fit: cover;   /* recorta en lugar de deformar */
+  border-radius: 8px;
+}
+
+.mix-flecha-izquierda,
+.mix-flecha-derecha {
+  background: transparent;
+  border: none;
+  color: #fff;
+  font-size: 20px;
+  cursor: pointer;
+  padding: 6px;
+}

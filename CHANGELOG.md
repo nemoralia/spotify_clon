@@ -1,5 +1,38 @@
 # Changelog
 
+## [2025-09-09]
+### Añadido
+- Sección **Mix** con tarjetas que muestran portada + texto en columna.  
+- Sistema de scroll horizontal con flechas de navegación (similar a Spotify).  
+
+### Cambiado
+- Ajuste de estilos en `.mix-contenedor` para mostrar siempre 4 tarjetas visibles.  
+- Reducción de tamaño de imágenes en **Mix** para evitar que deformen el contenedor.  
+- Control dinámico en JS para mostrar/ocultar flechas según posición del scroll.  
+
+---
+
+## [2025-09-05]
+### Añadido
+- Sección "Hecho para [usuario]" con subtítulo y título alineados en columna.
+- Botón "Mostrar todo" al lado derecho del título, con estilos similares a Spotify.
+- Alineación portada + texto en tarjetas de ítems usando flexbox.
+
+### Cambiado
+- Ajustes de márgenes y paddings para reducir separación excesiva entre subtítulo y título.
+
+
+## [2025-09-02]
+### Añadido
+- Lista de los ultimos escuchados
+---
+
+## [2025-08-26]
+### Añadido
+- Lista de albumes recientes en el contenido principal 
+- Botones de Todo, Música y Podcast.
+---
+
 ## [2025-08-08]
 ### Añadido
 - Se añade la lupa y la lista de recientes.
