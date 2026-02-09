@@ -1,5 +1,15 @@
 # Changelog
 
+## [2026-02-09]
+### Añadido
+- Sección **Hechos para** con tarjetas que muestran portada + texto en columna.  
+- Sistema de scroll horizontal con flechas de navegación (similar a Spotify).  
+- Se crea la estructura de **Escuchado Recientemente**,  **Similares a**,  **Tus artistas favoritos**,  **Albumes con canciones que te gustan**.
+
+### Cambiado
+- Ajuste de estilos en `.mix-contenedor` para mostrar siempre 4 tarjetas visibles.  
+---
+
 ## [2025-09-09]
 ### Añadido
 - Sección **Mix** con tarjetas que muestran portada + texto en columna.  
