@@ -1,5 +1,10 @@
 # Changelog
 
+## [2026-02-10]
+### Añadido
+- Sección **Escuchado Recientemente**,  **Similares a**,  **Tus artistas favoritos**,  **Albumes con canciones que te gustan** con tarjetas que muestran portada + texto en columna.  
+- Se crea la estructura del footer
+
 ## [2026-02-09]
 ### Añadido
 - Sección **Hechos para** con tarjetas que muestran portada + texto en columna.  

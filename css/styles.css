@@ -573,19 +573,19 @@ scrollbar-width: none;
   aspect-ratio: 1 / 1; /* cuadrada, como en Spotify */
   object-fit: cover;   /* recorta en lugar de deformar */
   border-radius: 8px;
+  cursor: pointer;
 }
 
 .mix:hover {
   transform: translateY (-2px);
 }
 
-.mix-img{
-  width: 100%;
-  aspect-ratio: 1 / 1;
-  object-fit: cover;
-  border-radius: 8px;
+.mix-artista-img {
+  width: 100%;         /* ocupa todo el ancho del mix */
+  aspect-ratio: 1 / 1; /* cuadrada, como en Spotify */
+  object-fit: cover;   /* recorta en lugar de deformar */
+  border-radius: 50%;
   cursor: pointer;
-
 }
 
 .mix-flecha-izquierda,
@@ -607,15 +607,32 @@ scrollbar-width: none;
 .mix-flecha-izquierda { left: 6px; }
 .mix-flecha-derecha { right: 6px; }
 
-/* Mostrar flechas al interactuar */
+
 .mix-wrapper:hover .mix-flecha-izquierda,
 .mix-wrapper:hover .mix-flecha-derecha,
 .mix-wrapper:focus-within .mix-flecha-izquierda,
 .mix-wrapper:focus-within .mix-flecha-derecha {
   opacity: 1;
-  pointer-events: auto;    /* Ahora sí clicables */
+  pointer-events: auto;  
 }
 
 .separador-seccion {
   height: 32px;
 }
+
+.mix-titulo {
+  font-size: 14px;
+  font-weight: 600;
+  margin: 0;
+  cursor: pointer;
+  gap: 4px;
+}
+
+.mix-subtitulo {
+  font-size: 12px;
+  color: #b3b3b3;
+  margin: 0;
+  margin-top: -2%
+}
+
+/* 7. Footer Contenido Principal */
