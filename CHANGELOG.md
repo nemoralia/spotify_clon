@@ -1,5 +1,17 @@
 # Changelog
 
+## [2026-02-23]
+### Añadido
+- **Estructura completa del footer** con 4 columnas (Compañía, Comunidades, Enlaces útiles, Planes de Spotify).
+- **Sección de redes sociales** (Instagram, Twitter, Facebook) con iconos circulares.
+- **Sección legal** Legal, Privacidad, Cookies, etc. y copyright.
+
+### Cambiado
+- **Separación de redes sociales** del grid principal para alinearlas correctamente.
+- **Mejora de espaciado** entre títulos (`h4`) y textos (`p`) del footer usando `margin-bottom` y `gap`.
+
+---
+
 ## [2026-02-10]
 ### Añadido
 - Sección **Escuchado Recientemente**,  **Similares a**,  **Tus artistas favoritos**,  **Albumes con canciones que te gustan** con tarjetas que muestran portada + texto en columna.  

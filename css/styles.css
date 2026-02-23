@@ -636,3 +636,60 @@ scrollbar-width: none;
 }
 
 /* 7. Footer Contenido Principal */
+
+.separador-linea {
+  border-bottom: 1px solid #222; /* Línea divisoria entre los elementos */
+}
+
+.footer {
+  font-size: 14px;
+}
+
+.footer-grid{
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
+}
+
+.footer-col{
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+}
+
+.footer-col h4{
+  margin: 0 0 16px; /* más separación debajo del título */
+  cursor: pointer;
+}
+
+.footer-text{
+  margin: 0;
+  font-size: 14px;
+  color: #b3b3b3;
+  cursor: pointer;
+}
+
+.footer-redes-sociales {
+  display: flex;
+  gap: 16px;
+  margin-top: 32px; 
+}
+
+.footer-redes-sociales i {
+  width: 40px;
+  height: 40px;
+  background: #282828;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  font-size: 20px;
+  color: #fff;
+}
+
+.footer-legal-col
+{
+  gap: 4px;
+}
