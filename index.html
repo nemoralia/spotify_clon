@@ -575,8 +575,6 @@
             </div>
 
 
-
-
             
             <div class="acerca-artista">
         <div class="acerca-contenido">
@@ -631,18 +629,29 @@
 
         </aside>
 
-
-
-
-
-
-
         <!-- REPRODUCTOR --> 
 
 
         <footer class="reproductor">
-            <div class="barra-reproduccion"> <!-- Clase de los iconos del reproductor -->
-                <div class="iconos-reproductor"> <!-- Clase de los iconos del reproductor -->
+            
+            <!-- IZQUIERDA: Info de la canción -->
+            <div class="reproductor-info">
+                <div class="reproductor-portada-pequeña">
+                    <img src="https://upload.wikimedia.org/wikipedia/en/a/a0/ReiseReise.jpg" alt="Reise Reise"
+                        class="reproductor-img-pequeña">
+                </div>
+                <div class="reproductor-detalles">
+                    <p class="reproductor-titulo-pequeño">Reise Reise</p>
+                    <p class="reproductor-artista-pequeño">Rammstein</p>
+                </div>
+                <div class="reproductor-acciones-pequeñas">
+                    <i class="bi bi-heart"></i>
+                </div>
+            </div>
+
+            
+            <div class="reproductor-centro">
+                <div class="reproductor-controles">
                     <i class="bi bi-shuffle"></i>
                     <i class="bi bi-skip-start-fill"></i>
                     <i class="bi bi-play-circle-fill"></i>
@@ -650,35 +659,33 @@
                     <i class="bi bi-repeat-1"></i>
                 </div>
 
-
-                <div class="barra-progreso-con-tiempos"> <!-- Clase de la barra de progreso con los tiempos -->
-                    <span class="tiempo-inicio">0:00</span>
-                    <div class="barra-progreso">
-                        <div class="progreso"></div> <!-- Clase de la barra de progreso -->
+                <div class="reproductor-barra">
+                    <span class="reproductor-tiempo">0:00</span>
+                    <div class="reproductor-progreso-contenedor">
+                        <div class="reproductor-progreso-fondo"></div>
+                        <div class="reproductor-progreso-lleno"></div>
+                        <div class="reproductor-punto"></div>
                     </div>
-                    <span class="tiempo-fin">3:45</span>
+                    <span class="reproductor-tiempo">3:45</span>
                 </div>
-            </div>
-
-
-            <div class="barra-opciones"> <!-- Clase de los iconos de opciones del reproductor -->
-                <i class="bi bi-view-stacked"></i>
-                <i class="bi bi-phone"></i>
-                <i class="bi bi-mic-fill"></i>
-
-                <div class="barra-volumen"> <!-- Clase de la barra de volumen -->
-                    <i class="bi bi-volume-up"></i>
-                    <input type="range" min="0" max="100" value="50" class="slider" id="volumeSlider">
-                    <!-- Barra deslizante para el volumen -->
                 </div>
 
-                <i class="bi bi-textarea-resize"></i>
-                <i class="bi bi-fullscreen"></i>
-
+                <div class="reproductor-opciones">
+                    <i class="bi bi-view-stacked"></i>
+                    <i class="bi bi-phone"></i>
+                    <i class="bi bi-mic-fill"></i>
+                    <div class="reproductor-volumen">
+                        <i class="bi bi-volume-up"></i>
+                        <input type="range" min="0" max="100" value="50" class="reproductor-slider">
+                    </div>
+                    <i class="bi bi-textarea-resize"></i>
+                    <i class="bi bi-fullscreen"></i>
+                </div>
+        
         </footer>
 
     </div>
 </body>
-<script src="js/categorias-scroll.js"></script> <!-- Importé el script para el scroll de categorías -->
 
+<script src="js/categorias-scroll.js"></script> <!-- Importé el script para el scroll de categorías -->
 </html>

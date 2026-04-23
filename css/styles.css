@@ -3,12 +3,14 @@ body {
   background-color: black;
   color: white;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
+  margin: 0;
+  padding-bottom: 110px;
 }
 
 /* 2. Layout principal */
 .layout {
   display: grid;
-  grid-template-columns: 300px 1fr 300px;
+  grid-template-columns: 240px 1fr 260px;
   grid-template-rows: 1fr 110px;
   grid-template-areas:
     "biblioteca principal reproduccion"
@@ -60,89 +62,6 @@ background: #181818; /* Color de fondo de la barra de desplazamiento */
   background-color: #121212;
   padding: 16px;
   border-radius: 8px;
-}
-
-.reproductor {
-  grid-area: reproductor;  
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  position: static;
-  border-radius: 8px;
-  height: 110px;
-  z-index: 10;
-  padding: 0 24px;
-  gap: 24px;
-}
-
-.barra-reproduccion {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 40%;
-  flex-shrink: 0;
-  margin: 0 auto;
-}
-
-.iconos-reproductor {
-  display: flex;
-  justify-content: center;
-  font-size: 30px;
-}
-
-.reproductor i {
-  color: #fff;
-  margin: 0 8px;
-  cursor: pointer;
-}
-
-.barra-progreso {
-  width: 100%;
-  height: 4px;
-  background-color: #333;
-  border-radius: 2px;
-  margin-top: 0 8px;
-  position: relative;
-}
-
-.progreso {
-  width: 30%;
-  height: 100%;
-  background-color: #333;
-  border-radius: 2px;
-}
-
-.barra-opciones {
-  display: flex;
-  align-items: center;
-  gap: 2px;
-  position: static;
-  margin-left: auto;
-  flex-shrink: 0;
-}
-
-.barra-progreso-con-tiempos{
-    display: flex;
-    align-items: center;
-    width: 100%;
-    gap: 12px;
-}
-
-.tiempo-inicial,
-.tiempo-final {
-  font-size: 8px;
-  color: #b3b3b3;
-  min-width: 40px;
-  text-align: center;
-}
-
-.barra-volumen .slider{
-  width: 80px;  /* Más pequeña */
-  height: 4px; /* Más delgada */
-  accent-color: white; /* Color verde de Spotify */
-  background: transparent; /* Fondo transparente */
-  border-radius: 2px;
-  
 }
 
 /* 3. Navbar y navegación */
@@ -762,6 +681,15 @@ scrollbar-width: none;
   flex: 1;
 }
 
+.estado-reproduccion .reproduccion-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  gap: 4px;
+  text-align: left;
+}
+
 .reproduccion-artista{
   font-size: 14px;
   color: #b3b3b3;
@@ -993,9 +921,297 @@ gap: 12px;
   overflow: hidden; 
 }
 
+/* 9. REPRODUCTOR - Footer */
+.reproductor {
+  grid-area: reproductor; 
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: fixed;
+  left: 0;
+  right:0;
+  bottom: 0;
+  height:88px;
+  padding: 0 16px;
+  z-index: 120;
+  box-sizing: border-box;
+  background-color: #000000;
+  border-top: 1px solid #000000;
+}
+
+.reproductor-info{
+  display: flex;
+  align-items: center;
+  gap:12px;
+  width: 25%;
+  flex-shrink: 0;
+}
+
+.reproductor-portada-pequeña {
+  width: 56px;
+  height: 56px;
+  border-radius: 4px; 
+  overflow: hidden;
+  flex-shrink: 0; 
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reproductor-img-pequeña {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.reproductor-detalles {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  flex: 0 1; 
+  min-width: 0; 
+}
+
+.reproductor-titulo-pequeño{
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reproductor-artista-pequeño {
+  font-size: 11px;
+  color: #b3b3b3;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reproductor-acciones-pequeñas {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0; 
+}
+
+.reproductor-acciones-pequeñas i {
+  font-size: 14px;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.reproductor-acciones-pequeñas i:hover {
+  color: #fff;
+}
+
+/* 9.1 Reproductor - Información izquierda */
+
+.reproduccion-info{
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 25%;
+  flex-shrink: 0;
+}
+
+.reproductor-portada-pequeña{
+  width: 56px;
+  height: 56px;
+  border-radius: 4px;
+  overflow: hidden;
+  flex-shrink: 0;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.reproductor-img-pequeña{
+width: 100%;
+height: 100%;
+object-fit: cover;
+}
+
+.reproductor-detalles{
+  display: flex;
+  flex-direction: column;
+  gap : 4px;
+  flex:1;
+  min-width: 0;
+}
+
+.reproductor-titulo-pequeño{
+  font-size: 13px;
+  font-weight: 600;
+  color: #fff;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+
+}
+
+.reproductor-artista-pequeño {
+  font-size: 11px;
+  color: #b3b3b3;
+  margin: 0;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.reproductor-acciones-pequeñas {
+  display: flex;
+  gap: 12px;
+  flex-shrink: 0;
+}
+
+.reproductor-acciones-pequeñas i {
+  font-size: 14px;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.reproductor-acciones-pequeñas i:hover {
+  color: #fff;
+}
+
+/* 9.2 Reproductor - Centro (Controles) */
+
+.reproductor-centro{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap:12px;
+  width:50%
+}
+
+.reproductor-controles {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 16px;
+}
+
+.reproductor-controles i {
+  font-size: 24px;
+  color: #fff;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+
+.reproductor-controles i:nth-child(3) { 
+  font-size: 30px;
+}
+
+.reproductor-barra {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 100%;
+}
+
+.reproductor-tiempo {
+  font-size: 11px;
+  color: #b3b3b3;
+  min-width: 40px;
+  text-align: center;
+}
+
+.reproductor-progreso-contenedor {
+  flex: 1;
+  height: 6px;
+  background-color: #404040;
+  border-radius: 3px;
+  position: relative;
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.reproductor-progreso-fondo {
+  width: 100%;
+  height: 100%;
+  background-color: #404040;
+  border-radius: 3px;
+}
+
+.reproductor-progreso-lleno {
+  width: 30%;
+  height: 100%;
+  background-color: #1db954;
+  border-radius: 3px;
+}
 
 
+.reproductor-punto {
+  position: absolute;
+  width: 12px;
+  height: 12px;
+  background-color: #fff;
+  border-radius: 50%;
+  top: 50%;
+  left: 30%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  transition: opacity 0.2s;
+}
 
+.reproductor-progreso-contenedor:hover .reproductor-punto {
+  opacity: 1;
+}
 
+/* 9.3 Reproductor - Opciones derecha */
 
+.reproductor-opciones {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  width: 25%;
+  flex-shrink: 0;
+  justify-content: flex-end;
+}
 
+.reproductor-opciones i {
+  font-size: 16px;
+  color: #b3b3b3;
+  cursor: pointer;
+  transition: color 0.2s;
+}
+.reproductor-opciones i:hover {
+  color: #fff;
+}
+
+.reproductor-volumen {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+
+}
+
+.reproductor-slider {
+  width: 120px;
+  height: 4px;
+  accent-color: #fff;
+  border-radius: 2px;
+  -webkit-appearance: none;
+  appearance: none;
+}
+
+.reproductor-slider::-webkit-slider-thumb {
+  -webkit-appearance: none;
+  appearance: none;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+}
+
+.reproductor-slider::-moz-range-thumb {
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: #fff;
+  cursor: pointer;
+  border: none;
+}
