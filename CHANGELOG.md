@@ -1,5 +1,15 @@
 # Changelog
 
+## [2026-04-24]
+### Añadido
+- **Panel lateral de reproducción** con portada, acciones rápidas, bloque "Acerca del artista" y cola de reproducción.
+- **Reproductor fijo inferior** con controles, barra de progreso, temporizador y control de volumen.
+- **Secciones de contenido mejor organizadas** para mantener el estilo tipo Spotify en la vista principal.
+
+### Cambiado
+- **Ajuste del layout general** para integrar mejor la barra lateral, el contenido central y el reproductor.
+- **Mejora de la jerarquía visual** en títulos, tarjetas y bloques informativos del panel derecho.
+
 ## [2026-02-23]
 ### Añadido
 - **Estructura completa del footer** con 4 columnas (Compañía, Comunidades, Enlaces útiles, Planes de Spotify).
