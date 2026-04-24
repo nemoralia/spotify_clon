@@ -5,6 +5,10 @@ body {
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
 }
 
+.contenido-principal {
+  min-width: 0;
+}
+
 /* 2. Layout principal */
 .layout {
   display: grid;
@@ -534,21 +538,20 @@ h2.hecho-para {
 
 
 .mix-wrapper {
-  position: relative;
-  display: flex;
-  align-items: center;
-  overflow: hidden;
-  gap: 10px; /* espacio entre botones y viewport */
-  
+position: relative;
+display: flex;
+align-items: center;
+overflow: hidden;
+gap: 10px;
 }
 
 .mix-viewport {
-  overflow: hidden;
-  width: calc((160px * 4) + (16px * 3)); /* 4 tarjetas + 3 gaps */
-
+flex: 1 1 auto;
+min-width: 0;
+overflow: hidden;
 }
 
-.mix-contenedor{
+.mix-contenedor {
 display: flex;
 gap: 16px;
 overflow-x: auto;
@@ -558,14 +561,13 @@ scrollbar-width: none;
 }
 
 .mix {
-  width: 160px;        /* ancho fijo para cada tarjeta */
-  flex-shrink: 0;      /* evita que se encojan */
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  font-size: 14px;
-  transition: transform 0.2s ease; /* transición suave para el desplazamiento */
-  
+flex: 0 0 clamp(150px, 18vw, 190px);
+width: auto;
+display: flex;
+flex-direction: column;
+gap: 8px;
+font-size: 14px;
+transition: transform 0.2s ease;
 }
 
 .mix-img {
@@ -577,7 +579,7 @@ scrollbar-width: none;
 }
 
 .mix:hover {
-  transform: translateY (-2px);
+  transform: translateY(-2px);
 }
 
 .mix-artista-img {

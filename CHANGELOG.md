@@ -5,6 +5,7 @@
 - **Panel lateral de reproducción** con portada, acciones rápidas, bloque "Acerca del artista" y cola de reproducción.
 - **Reproductor fijo inferior** con controles, barra de progreso, temporizador y control de volumen.
 - **Secciones de contenido mejor organizadas** para mantener el estilo tipo Spotify en la vista principal.
+- **Amplicacion de tarjetas** en varias secciones para aproximarse a 10 bloques.
 
 ### Cambiado
 - **Ajuste del layout general** para integrar mejor la barra lateral, el contenido central y el reproductor.

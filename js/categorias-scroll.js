@@ -33,6 +33,20 @@ document.addEventListener("DOMContentLoaded", function () {
 
     if (!mix || !flechaMixDerecha || !flechaMixIzquierda) return;
 
+    const getScrollStep = function () {
+      const firstCard = mix.querySelector(".mix");
+      if (!firstCard) return 220;
+
+      const cardWidth = firstCard.getBoundingClientRect().width;
+      const gap = parseFloat(getComputedStyle(mix).columnGap || getComputedStyle(mix).gap || "0");
+      const cardPlusGap = cardWidth + gap;
+
+      const visibleCards = Math.max(1, Math.floor(mix.clientWidth / cardPlusGap));
+      const cardsPerClick = visibleCards >= 5 ? 2 : 1;
+
+      return Math.round(cardPlusGap * cardsPerClick);
+    };
+
     const syncFlechas = function () {
       flechaMixIzquierda.style.display = mix.scrollLeft > 0 ? "inline-block" : "none";
       flechaMixDerecha.style.display =
@@ -45,11 +59,11 @@ document.addEventListener("DOMContentLoaded", function () {
     window.addEventListener("resize", syncFlechas);
 
     flechaMixDerecha.addEventListener("click", function () {
-      mix.scrollBy({ left: 220, behavior: "smooth" });
+      mix.scrollBy({ left: getScrollStep(), behavior: "smooth" });
     });
 
     flechaMixIzquierda.addEventListener("click", function () {
-      mix.scrollBy({ left: -220, behavior: "smooth" });
+      mix.scrollBy({ left: -getScrollStep(), behavior: "smooth" });
     });
   });
 });
