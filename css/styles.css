@@ -3,14 +3,12 @@ body {
   background-color: black;
   color: white;
   font-family: "Montserrat", Helvetica, Arial, sans-serif;
-  margin: 0;
-  padding-bottom: 110px;
 }
 
 /* 2. Layout principal */
 .layout {
   display: grid;
-  grid-template-columns: 240px 1fr 260px;
+  grid-template-columns: 230px 1fr 300px;
   grid-template-rows: 1fr 110px;
   grid-template-areas:
     "biblioteca principal reproduccion"
@@ -62,6 +60,87 @@ background: #181818; /* Color de fondo de la barra de desplazamiento */
   background-color: #121212;
   padding: 16px;
   border-radius: 8px;
+}
+
+.reproductor {
+  grid-area: reproductor;
+  padding: 16px;  
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: fixed;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  z-index: 100;
+}
+
+.barra-reproduccion {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 40%;
+}
+
+.iconos-reproductor {
+  display: flex;
+  justify-content: center;
+  font-size: 24px;
+}
+
+.reproductor i {
+  color: #fff;
+  margin: 0 8px;
+  cursor: pointer;
+}
+
+.barra-progreso {
+  width: 100%;
+  height: 4px;
+  background-color: #333;
+  border-radius: 2px;
+  margin-top: 0 8px;
+  position: relative;
+}
+
+.progreso {
+  width: 30%;
+  height: 100%;
+  background-color: #333;
+  border-radius: 2px;
+}
+
+.barra-opciones {
+  display: flex;
+  position: absolute;
+  right: 24px;
+  top: 50%;
+  transform: translateY(-50%);
+
+}
+
+.barra-progreso-con-tiempos{
+    display: flex;
+    align-items: center;
+    width: 100%;
+    gap: 12px;
+}
+
+.tiempo-inicial,
+.tiempo-final {
+  font-size: 8px;
+  color: #b3b3b3;
+  min-width: 40px;
+  text-align: center;
+}
+
+.barra-volumen .slider{
+  width: 80px;  /* Más pequeña */
+  height: 4px; /* Más delgada */
+  accent-color: white; /* Color verde de Spotify */
+  background: transparent; /* Fondo transparente */
+  border-radius: 2px;
+  
 }
 
 /* 3. Navbar y navegación */
@@ -505,7 +584,7 @@ scrollbar-width: none;
   width: 100%;         /* ocupa todo el ancho del mix */
   aspect-ratio: 1 / 1; /* cuadrada, como en Spotify */
   object-fit: cover;   /* recorta en lugar de deformar */
-  border-radius: 50%; 
+  border-radius: 50%;
   cursor: pointer;
 }
 
@@ -568,10 +647,9 @@ scrollbar-width: none;
 
 .footer-grid{
   display: grid;
-  grid-template-columns: auto auto auto auto auto;
-  gap: 36px;
-  align-items: start;
-  justify-items: start;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+
 }
 
 .footer-col{
@@ -594,11 +672,8 @@ scrollbar-width: none;
 
 .footer-redes-sociales {
   display: flex;
-  flex-direction: row;
-  gap: 8px;
-  grid-column: 5;
-  grid-row: 1;
-  justify-content: center;
+  gap: 16px;
+  margin-top: 32px; 
 }
 
 .footer-redes-sociales i {
@@ -614,34 +689,9 @@ scrollbar-width: none;
   color: #fff;
 }
 
-.footer-legal {
-  display: flex;
-  grid-template-columns: 1fr auto; /* Dos columnas: legal a la izquierda, copyright a la derecha */
-  gap: 20px;
-  align-items: left;
-  padding-top: 8px;
-
-}
-
-
-.footer-legal-content{
-  display: flex;
-  gap:10px;
-  align-items: start;
- font-size: 14px;
-}
-
-.footer-legal-text{
-  margin: 0;
-  color: #b3b3b3;
-  cursor: pointer;
-  
-}
-
-.footer-copyright {
-  font-size: 14px;
-  color: #b3b3b3;
-  margin: 0;
+.footer-legal-col
+{
+  gap: 4px;
 }
 
 /* 8. Estado de Reproducción */
@@ -679,15 +729,6 @@ scrollbar-width: none;
   flex-direction: column;
   gap: 4px;
   flex: 1;
-}
-
-.estado-reproduccion .reproduccion-info {
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  width: 100%;
-  gap: 4px;
-  text-align: left;
 }
 
 .reproduccion-artista{
@@ -921,6 +962,8 @@ gap: 12px;
   overflow: hidden; 
 }
 
+
+
 /* 9. REPRODUCTOR - Footer */
 .reproductor {
   grid-area: reproductor; 
@@ -931,7 +974,7 @@ gap: 12px;
   left: 0;
   right:0;
   bottom: 0;
-  height:88px;
+  height:92px;
   padding: 0 16px;
   z-index: 120;
   box-sizing: border-box;
@@ -1047,7 +1090,6 @@ object-fit: cover;
   white-space: nowrap;
   overflow: hidden;
   text-overflow: ellipsis;
-
 }
 
 .reproductor-artista-pequeño {
@@ -1094,14 +1136,14 @@ object-fit: cover;
 }
 
 .reproductor-controles i {
-  font-size: 24px;
+  font-size: 28px;
   color: #fff;
   cursor: pointer;
   transition: color 0.2s;
 }
 
 .reproductor-controles i:nth-child(3) { 
-  font-size: 30px;
+  font-size: 36px;
 }
 
 .reproductor-barra {
@@ -1214,4 +1256,12 @@ object-fit: cover;
   background: #fff;
   cursor: pointer;
   border: none;
+}
+
+.estado-reproduccion .reproduccion-info {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  width: 100%;
+  text-align: left;
 }
